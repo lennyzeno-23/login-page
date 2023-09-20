@@ -1,0 +1,36 @@
+
+
+package seleniumsample;
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class LoginPage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ChromeDriver driver=new ChromeDriver();
+
+
+
+driver.manage().window().maximize();
+driver.get("https://uibank.uipath.com/login");
+
+// Maximize window size of browser
+driver.manage().window().maximize();
+
+// Enter your login email id
+driver.findElement(By.id("username"));
+    
+
+// Enter your login password
+driver.findElement(By.id("password"))
+    .sendKeys("Edo@123");
+driver.findElement(By.className("signin-button"))
+.click();
+driver.close();
+
+	}
+
+}
